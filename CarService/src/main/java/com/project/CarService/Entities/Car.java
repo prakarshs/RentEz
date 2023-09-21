@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.Instant;
 
 @Entity
 @Data
@@ -27,5 +26,5 @@ public class Car {
     @Column(name = "CAR_RENT")
     private Long carRentAmount;
     @Column(name = "CAR_TIME")
-    private Instant carAddTime;
+    private String carAddTime;
 }

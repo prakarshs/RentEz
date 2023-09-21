@@ -1,0 +1,33 @@
+type Car{
+    carId:ID!
+    carName:String
+    carDistance:Float
+    carQuantity:Int
+    carRentAmount:Int
+    carAddTime:String
+}
+type Mutation{
+    add(carRequest:CarRequest):CarResponse
+    reduce(carId:Int,carRequestQuantity:Int):CarResponse
+}
+
+type Query{
+    show(carId:Int):CarResponse
+    showAll:[Car]
+}
+
+type CarResponse{
+    message:String
+    carName:String
+    carQuantity:Int
+    carDistance:Float
+    carRentAmount:Int
+    carAddTime:String
+}
+
+input CarRequest{
+    carName:String
+    carQuantity:Int
+    carDistance:Float
+    carRentAmount:Int
+}

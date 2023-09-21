@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://${DB_HOST:localhost}:3306/cars
+    url: jdbc:mysql://${DB_HOST:localhost}:3306/car-db
     username: root
     password: root
     driverClassName: com.mysql.cj.jdbc.Driver
