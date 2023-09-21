@@ -1,5 +1,6 @@
 package com.project.CarService.Controllers;
 
+import com.project.CarService.Entities.Car;
 import com.project.CarService.Models.CarRequest;
 import com.project.CarService.Models.CarResponse;
 import com.project.CarService.Services.CarService;
@@ -21,9 +22,9 @@ public class CarController {
         return new ResponseEntity<>(carService.addCar(carRequest), HttpStatus.OK);
     }
 
-    @GetMapping("/reduce/{carId}")
+    @PutMapping("/reduce/{carId}")
     public ResponseEntity<CarResponse> add(@PathVariable Long carId, @RequestParam Long carRequest){
-        return new ResponseEntity<>(carService.reduceCar(carRequest), HttpStatus.OK);
+        return new ResponseEntity<>(carService.reduceCar(carId, carRequest), HttpStatus.OK);
     }
 
     @GetMapping("/show/{carId}")
@@ -32,7 +33,7 @@ public class CarController {
     }
 
     @GetMapping("/showAll")
-    public ResponseEntity<List<CarResponse>> shoAll(){
+    public ResponseEntity<List<Car>> shoAll(){
         return new ResponseEntity<>(carService.showAll(), HttpStatus.OK);
     }
 }

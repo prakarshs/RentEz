@@ -13,4 +13,5 @@ public class CarRequest {
     private String carName;
     private Double carDistance;
     private Long carRentAmount;
+    private Long carQuantity;
 }
