@@ -11,8 +11,8 @@ import java.time.Instant;
 @Builder
 public class CarResponse {
     private String message;
-    private Long carId;
     private String carName;
+    private Long carQuantity;
     private Double carDistance;
     private Long carRentAmount;
     private Instant carAddTime;

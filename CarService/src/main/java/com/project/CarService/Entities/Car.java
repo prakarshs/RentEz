@@ -3,6 +3,7 @@ package com.project.CarService.Entities;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.Instant;
@@ -10,6 +11,7 @@ import java.time.Instant;
 @Entity
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
 @Table(name = "CAR_DETAILS")
 public class Car {
@@ -20,6 +22,8 @@ public class Car {
     private String carName;
     @Column(name = "CAR_DISTANCE")
     private Double carDistance;
+    @Column(name = "CAR_QUANTITY")
+    private Long carQuantity;
     @Column(name = "CAR_RENT")
     private Long carRentAmount;
     @Column(name = "CAR_TIME")
