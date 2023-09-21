@@ -26,7 +26,7 @@ public class CarServiceIMPL implements CarService{
                 .carDistance(carRequest.getCarDistance())
                 .carQuantity(carRequest.getCarQuantity())
                 .carRentAmount(carRequest.getCarRentAmount())
-                .carAddTime(Instant.now())
+                .carAddTime(Instant.now().toString())
                 .build();
         log.info("ADDING CAR : {}",car.getCarName());
         carRepository.save(car);

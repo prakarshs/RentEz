@@ -15,5 +15,5 @@ public class CarResponse {
     private Long carQuantity;
     private Double carDistance;
     private Long carRentAmount;
-    private Instant carAddTime;
+    private String carAddTime;
 }
